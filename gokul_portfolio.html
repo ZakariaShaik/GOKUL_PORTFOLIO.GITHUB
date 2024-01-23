@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MY PORTFOLIO</title>
+        <style>
+        body{ 
+            margin: 0; 
+            padding: 0; 
+            font-family: Arial, Helvetica, sans-serif; 
+            background-color: #F5EFE0; 
+            padding-top: 80px;
+
+        }
+        header { 
+            background-color: #1a1a1a; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            padding: 10px 0; 
+            box-sizing: border-box; 
+        }
+        header nav{ 
+            display: flex; 
+            justify-content: flex-end; 
+        }
+        main{ 
+            padding-top: 80px; 
+            padding-left: 20px; 
+            padding-right: 20px; 
+            background-color: #F5EFE0; 
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .project-container { 
+            height: 100%; 
+            display: inline-block; 
+            vertical-align: top; 
+            background-color: black; 
+            color: white; 
+            padding: 20px; 
+            box-sizing: border-box; 
+            margin-top: 100px; 
+        }
+        .project-container h1 { 
+            margin: 0; 
+        }
+        li{ 
+            font-size: larger; 
+        }
+        P{ 
+            font-size:larger; 
+            text-align:initial; 
+        }
+        .project-box { 
+            margin: 0 auto; 
+            display: flex; 
+            justify-content: space-between; 
+        }
+        .project-box .project-container { 
+            flex: 2; 
+        }
+        .container a{ 
+            display: inline-flex; 
+            color: white; 
+            padding: 14px 16px; 
+            text-align: center; 
+            text-decoration: none; 
+            margin-right: 25px; 
+            margin-inline-start: auto; 
+        }
+        .image-text-editor{ 
+            display: flex; 
+            flex-wrap: wrap;
+            width: 50%; 
+        }
+        .image{ 
+            height: 350px; 
+            width: 50%;
+            margin-right: 20px;
+            float:left;
+         }
+        .text{ 
+        
+            width: 100%; 
+        }
+        .photography-container{
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            align-items: center; 
+            gap: 20px;
+        }
+        .photography-logo{ 
+            height: 150px; 
+            width: 150px; 
+            margin-right: 50%; 
+        }
+        .photography-text{ 
+            flex:1; 
+        }
+        .photography-heading{ 
+            font-size: 24px; 
+            font-weight: lighter; 
+            margin-top: 5px; 
+        }
+        .photography-club{ 
+            font-size: 18px; 
+            font-weight: lighter; 
+            margin-top: 5px; 
+        }
+        .experience-container{ 
+            background-color: #e6e6e6; 
+            padding: 20px; 
+            margin: 20px 0;
+            display: flex;
+             
+        }
+        .photo-container{
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .photo-logo{
+            height: 150px;
+            width: 150px;
+            margin-right: 20px;
+        }
+        .photography-text{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .photographer-heading{
+            font-size: 24px;
+            font-weight: lighter;
+            margin-top: 10px;
+
+        }
+        .photography-club{
+            font-size: 18px;
+            font-weight: lighter;
+            margin-top: 5px;
+        }
+        .experience-heading{
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .experience-details{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .experience-image-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.experience-image {
+  height: 100px;
+  width: 150px;
+  margin-right: 20px;
+}
+
+.experience-text {
+  flex: 1;
+}
+
+.skills-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.skills {
+  font-size: 14px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+}
+.experience-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.text{
+    font-size: larger;
+    text-align: initial;
+    line-height: 1.5;
+}
+.project-container p{
+    color: white;
+    font-family: arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+    font-size:large;
+}
+.project-section {
+    position: relative;
+    margin-top: 1rem;
+}
+.project-section h1 {
+    position: relative;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.project-box {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.project-box .project-container {
+    flex: 2;
+    margin-bottom: 2rem;
+}
+.project-box .social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.project-box .social-media-icons a{
+    margin: 0 1rem;
+}
+
+.project-box .social-media-icons img{
+    height: 2rem;
+    width: 2rem;
+}
+.social-media-icons {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    margin-top: 2rem;
+    margin-left: auto;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.contact-form label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #000;
+}
+        
+        </style>
+    </head>
+    <body id = "top">
+        <header>
+            <nav>
+                
+                <DIV class = "container">
+                    
+                    <a href = "#top"><B> HOME </a>
+                    <a href = "#about-me"> ABOUT ME</a>
+                    <a href = "#experience-box"> EXPERIENCE</a>
+                    <a href = "#project-section"> PROJECTS </a>
+                    <a> PHOTOS</a>
+                    <a href = "#contact-section"> CONTACT ME</a></B>
+                                        
+                    </DIV>
+                    
+                </DIV>
+            </nav>
+        </header>
+        <BR>
+        <br>
+        <br>
+        <br>
+        <div class = "image-text-container">
+            <img src = "gokul.jpg.jpg" height = "350" width = "800" class = "image">
+            <div class ="text">
+                <div id = "about-me" class = "about-me"> 
+                <h1 style = "color:blue"><center> ABOUT ME</center> </h1>
+                <p><font size = "5">I am a B.Tech EEE student at VIT Chennai with a keen interest in Arduino and IoT. I have completed multiple Arduino projects, such as a<em> Smart Home System, a Robotic Arm, and a Weather Station</em>. I have also attended an Arduino workshop where I learned how to use various sensors, actuators, and modules. I have gained hands-on experience with Arduino programming, circuit design, and troubleshooting. I am also passionate about learning new technologies and exploring their applications. I have participated in an IoT workshop conducted by IIT Varanasi, where I learned how to use cloud platforms, web services, and MQTT protocols. I am currently working on a student-funded model rocket creation project, where I am responsible for designing and testing the electronic components of the rocket. I am always eager to take on new challenges and opportunities that can help me grow as an electrical engineer. I am looking for internships or projects where I can apply my skills and knowledge</p></font>
+                </div>
+                </div>
+                </div>
+                <div class = "experience-box" id = "experience-box">
+                <h1 style="color: #1a1a1a;"><CENTER>MY EXPERIENCE</CENTER></h1>
+            
+        
+        <div  class="experience-container">
+            
+            <div class = "photo-container">
+            <img src = "photography.jpeg" height = "150" width = "150" class = "photo-logo">   
+            <div class = "photography-text" style="flex: 1; display: flex; flex-direction: column; align-items: flex-start;">
+                    <h2 class = "photographer-heading" style = "font-size: 18px; font-weight: lighter; margin-top: 5px;">PHOTOGRAPHER</h2>
+                    <p class = "photography-club" style="font-size: 24px; font-weight: lighter; margin-top: 10px;"> PHOTOGRAPHY CLUB VIT CHENNAI</p></center>
+                    <P class = "skills" style="font-size: 18px; font-weight: lighter; margin-top: 5px;"><b>SKILLS:</b> Artistic Skill&nbsp;   Team Coordination&nbsp;    Interpersonal Skills&nbsp;    Technical Skillset</P>
+            </div>
+        </div>
+        <div class = "experience-details">
+        <div class = "experience-image-container">
+            <img src = "MBblue_trans.jpg" height = "300" width = "250" class = "experience-image" />
+            </div>
+            <div class = "experience-text">
+                <p "font-size: 24px; font-weight: lighter; margin-top: 10px;"> MEMBER </p>
+                <h2 class = "skills-heading" style = "font-size: 24px; font-weight: lighter; margin-top: 10px;">IEEE Student Branch VIT CHENNAI</p></h2>
+                <P class = "skills" style="font-size: 18px; font-weight: lighter; margin-top: 5px;"><b>SKILLS:</b> Analytical Skills&nbsp;  Problem Solving&nbsp;   Team Coordination&nbsp;    Interpersonal Skills&nbsp;   Technical Skillset</P>
+                </div>
+                </div>
+                </div>
+                </div>
+                <BR>
+                    <div id="project-section" class="project-section">
+                    <div class = "project-section" id = "project-section">
+            <h1><center><em>MY PROJECTS</em></center></h1>
+                
+        <div class="project-box">
+            <div class="project-container">
+                <h1><center><em>PROJECT 1</em></center></h1>
+                <br>
+                <img src = "P1.2.jpg" height = "450" width = "600" style= "float:left; margin-right: 20px">
+                <div class = "text">
+                <p>Project 1, titled "The Sunflower," encompasses the successful design and implementation of a compact dual-axis solar tracker. This innovative system, aptly named The Sunflower, achieves optimal sunlight exposure for solar panels by dynamically adjusting its position. The integration of Arduino and servo motors results in a resilient prototype that emulates the behavior of a smart sunflower. The primary objective of this project is to enhance energy production efficiency by maximizing sunlight capture. This is achieved through the automated real-time adjustment of the solar tracker, ensuring that solar panels receive an optimal amount of sunlight throughout the day. Furthermore, the project incorporates a voltage sensor, which provides valuable real-time data. This data is then displayed on an LCD screen, adding an additional layer of sophistication to the system. The integration of these components collectively contributes to the creation of a comprehensive and efficient solar tracking solution.</font></p>
+                    </div>
+            <div class="project-container">
+                <h1><center><em>PROJECT 2</em></center</h1>
+                <img src = "P2.1.jpg" height = "450" width = "600" style = "float:right; margin-left:20px">
+        
+                    <p>The Digital Sunflower represents a notable advancement in innovation, as it introduces a virtual counterpart to the physical Sunflower project through the development of a Python script. This script facilitates the creation of a digital twin, enabling simulation and analysis of the Sunflower's behavior in a virtual environment. A key aspect of this digital representation involves the collection of data during inclement weather, specifically rainy days. This data is utilized to simulate the performance of The Digital Sunflower and assess its voltage generation capabilities under adverse weather conditions. Looking ahead, the project's future iterations aim to elevate its capabilities by incorporating real-time data sourced from the internet. This enhancement will provide a more dynamic and accurate simulation, allowing for a comprehensive analysis of energy generation potential in real-time scenarios. This forward-thinking approach not only demonstrates a commitment to advancing sustainable technology but also underscores a dedication to exploring and pushing the boundaries of innovation. The development of The Digital Sunflower stands as a significant stride toward sustainable technology, and the anticipation of engaging in more groundbreaking projects in the future showcases a proactive and forward-looking mindset in the pursuit of technological advancements.</p></font>
+                </div>
+                </div>
+            </div>
+        </div>
+        <h1 id = "contact-section" class = "contact-box"> <center> CONTACT ME </center></h1>
+        <div class = "contact-form">
+            <form action = "/submit_form" method = "post">
+                <label for = "name"> Name : </label><br>
+                <input type = "text" id = "name" name = "name" required><br>
+                <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" required><br>
+    <input type="submit" value="Submit">
+  </form>
+</div> 
+        <div class = "social-media-icons">
+        <a href = "https://www.linkedin.com/in/easwara-gokulan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target = "_blank">
+            <img src = "images.jpg" alt = "LinkedIn" height = "50" width = "50" style = "margin-right: 20px;">
+        </a>
+        <a href = "https://github.com/Easwara-Gokulan">  <img src="github.png" alt="GitHub" height= "50"  width = "50">
+            </a>
+            </div>
+    </body>
+</html>
